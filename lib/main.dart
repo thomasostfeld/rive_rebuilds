@@ -23,13 +23,15 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-        itemCount: 12,
+        itemCount: 15,
         itemBuilder: (context, index) {
           return const SizedBox.square(
             dimension: 100,
             child: RiveAnimation.asset(
               'assets/rive/square.riv',
-              animations: ['abc'],
+              animations: [
+                'abc', // non-existent to force no animation playback
+              ],
             ),
           );
         },
